@@ -85,6 +85,34 @@ body {
 
 /* ================= HERO ================= */
 .hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft animated glow background layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59,130,246,0.25), transparent 60%);
+  top: -150px;
+  left: -150px;
+  filter: blur(40px);
+  animation: floatGlow 10s ease-in-out infinite;
+}
+
+@keyframes floatGlow {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(80px, 60px); }
+}
+
+.hero-content {
+  position: relative;
+  transform: perspective(1000px);
+}
+
+.hero {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -359,4 +387,37 @@ body {
     max-width: 280px;
     margin: 0 !important; /* removes any hidden spacing conflicts */
   }
+}
+
+@media (max-width: 500px) {
+
+  /* override global full-width rule ONLY for contact/footer buttons */
+  .footer .btn,
+  .contact .btn,
+  .btn.contact-btn {
+    width: auto !important;
+    display: inline-flex !important;
+    max-width: fit-content !important;
+    padding: 10px 14px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* keep hero buttons full width (important UX) */
+  .hero .btn {
+    width: 100% !important;
+  }
+}
+
+.compact-btn {
+  width: auto !important;
+  display: inline-flex !important;
+  padding: 10px 14px !important;
+  font-size: 0.9rem !important;
+  max-width: fit-content !important;
+  border-radius: 8px;
+}
+
+/* ensure footer doesn't stretch it */
+.footer .compact-btn {
+  width: auto !important;
 }
