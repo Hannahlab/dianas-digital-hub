@@ -421,3 +421,16 @@ body {
 .footer .compact-btn {
   width: auto !important;
 }
+
+#services .services-cta {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+#services .services-cta .btn {
+  width: auto;
+  max-width: 260px;
+}
