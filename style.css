@@ -49,7 +49,6 @@ body {
   padding: 14px 0;
 }
 
-/* LOGO */
 .logo {
   font-size: 1.5rem;
   font-weight: 800;
@@ -60,7 +59,6 @@ body {
   color: var(--accent);
 }
 
-/* NAV LINKS */
 .nav {
   display: flex;
   align-items: center;
@@ -78,7 +76,6 @@ body {
   color: var(--accent);
 }
 
-/* MOBILE MENU ICON */
 .nav-toggle {
   display: none;
   font-size: 1.5rem;
@@ -91,6 +88,7 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   background: radial-gradient(circle at top, #1b2a4a, var(--bg));
   padding-top: 60px;
@@ -105,26 +103,52 @@ body {
   color: var(--muted);
 }
 
+/* ================= HERO ACTIONS (FIXED) ================= */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* MOBILE HERO FIX */
+@media (max-width: 900px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 /* ================= BUTTON SYSTEM ================= */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   padding: 12px 18px;
   border-radius: 8px;
-
   font-weight: 600;
   text-decoration: none;
-
   transition: 0.3s ease;
   line-height: 1;
-
   color: inherit;
 }
 
-/* ICON FIX (FINAL PERFECT VERSION) */
+/* ICON FIX */
 .btn i {
   color: currentColor;
   font-size: 1rem;
@@ -135,7 +159,7 @@ body {
   transform: translateY(1px);
 }
 
-/* PRIMARY BUTTON */
+/* PRIMARY */
 .primary {
   background: var(--accent);
   color: #fff;
@@ -143,16 +167,6 @@ body {
 
 .primary:hover {
   background: var(--accent2);
-}
-
-/* STORE BUTTON */
-.store-btn {
-  background: #fff;
-  color: #000;
-}
-
-.store-btn i {
-  color: #000;
 }
 
 /* SECONDARY */
@@ -164,6 +178,16 @@ body {
 .secondary:hover {
   background: var(--accent);
   color: #fff;
+}
+
+/* STORE BUTTON */
+.store-btn {
+  background: #fff;
+  color: #000;
+}
+
+.store-btn i {
+  color: #000;
 }
 
 /* ================= SECTIONS ================= */
@@ -202,11 +226,9 @@ body {
   background: var(--card);
   padding: 25px;
   border-radius: 12px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   transition: 0.3s ease;
 }
 
@@ -216,12 +238,7 @@ body {
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
 }
 
-/* CARD CONTENT */
-.card-content {
-  flex: 1;
-}
-
-/* CARD ACTIONS */
+/* ================= CARD ACTIONS ================= */
 .card-actions {
   margin-top: auto;
   display: flex;
@@ -229,19 +246,18 @@ body {
   padding-top: 20px;
 }
 
-/* UNIFORM CTA SIZE */
 .full-btn {
   width: 100%;
   max-width: 240px;
 }
 
-/* STORE CARD */
+/* ================= STORE CARD ================= */
 .store-card {
   text-align: center;
   align-items: center;
 }
 
-/* ================= NAV MOBILE ================= */
+/* ================= MOBILE GRID ================= */
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -271,10 +287,6 @@ body {
     display: flex;
   }
 
-  .nav a {
-    margin: 10px 0;
-  }
-
   .nav-toggle {
     display: block;
   }
@@ -288,34 +300,6 @@ body {
   .btn {
     width: 100%;
   }
-}
-
-.app-cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-  width: 100%;
-}
-
-/* Coming Soon button styling */
-.coming-soon-btn {
-  width: 100%;
-  max-width: 240px;
-
-  opacity: 0.85;
-  cursor: not-allowed;
-
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  background: transparent;
-
-  text-align: center;
-}
-
-/* keep icon aligned if added later */
-.coming-soon-btn i {
-  color: currentColor;
 }
 
 /* ================= FOOTER ================= */
@@ -362,41 +346,17 @@ body {
   transform: translateY(0);
 }
 
-#services .center-cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-}
-
-#services .center-cta .btn {
-  width: 100%;
-  max-width: 260px;
-}
-
-.services-cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  margin-top: 45px; /* spacing from cards */
-}
-
-.services-cta .btn {
-  width: 100%;
-  max-width: 260px;
-}
-
 @media (max-width: 900px) {
-  .hero .center {
+  .hero-actions {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px; /* 🔥 REAL FIX */
+    gap: 18px !important; /* 🔥 THIS IS THE KEY FIX */
   }
 
-  .hero .btn {
+  .hero-actions .btn {
     width: 100%;
     max-width: 280px;
+    margin: 0 !important; /* removes any hidden spacing conflicts */
   }
 }
