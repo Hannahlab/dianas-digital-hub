@@ -1,48 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diana Digital Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="style.css">
+  <meta name="description" content="Elite Web Developer building high-performance websites, fibre services, and digital products that drive real business growth." />
+  <title>Diana's Digital Hub | Web Development & Digital Solutions</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="hero">
-  <h1>Diana Digital Hub 🌸</h1>
-  <p>Web Developer • WiFi Agent • Online Entrepreneur</p>
+<header class="header" id="header">
+  <div class="container nav-container">
+    <div class="logo">Diana's Digital<span>Hub</span></div>
 
-  <a class="btn" href="https://wa.me/27611522746" target="_blank">
-    💬 WhatsApp Me
-  </a>
+    <nav class="nav" id="nav-menu">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#store">Store</a>
+      <a href="#fibre">Fibre</a>
+      <a href="#app">App</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-toggle" id="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
 </header>
 
-<section class="grid">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-content reveal">
+    <h1>High-Performance Websites That Convert Visitors Into Customers</h1>
+    <p>We design and build ultra-fast, modern websites for businesses that want real growth, credibility, and online dominance.</p>
 
-  <div class="card">
-    <h2>📡 WiFi & Fibre Agent</h2>
-    <p>Get connected with fast and reliable internet solutions.</p>
-    <a class="btn" href="https://wa.me/message/GPNBZY5WD5MTO1" target="_blank">Apply / Learn More</a>
+    <div class="hero-actions">
+
+      <a class="btn primary"
+         href="https://wa.me/27611522746?text=Hi%20DevStudio%20%F0%9F%91%8B%20I%E2%80%99d%20like%20to%20build%20a%20high-performance%20website%20for%20my%20business.%20I%E2%80%99m%20looking%20for%20a%20modern%2C%20fast%2C%20mobile-friendly%20site%20that%20helps%20me%20get%20more%20customers.%20Please%20share%20pricing%20and%20next%20steps."
+         target="_blank">
+        <i class="fab fa-whatsapp"></i> Start Your Website
+      </a>
+
+      <a class="btn secondary" href="#services">Explore Services</a>
+
+    </div>
   </div>
-
-  <div class="card">
-    <h2>🛍️ My Store</h2>
-    <p>Shop gadgets and curated items on my Yaga store.</p>
-    <a class="btn" href="https://www.yaga.co.za/gadg-co" target="_blank">Visit Store</a>
-  </div>
-
-  <div class="card">
-    <h2>💻 GitHub Projects</h2>
-    <p>Explore my web development work and coding projects.</p>
-    <a class="btn" href="https://github.com/Hannahlab" target="_blank">View GitHub</a>
-  </div>
-
 </section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+
+    <h2 class="section-title reveal">Web Development Services</h2>
+
+    <div class="grid">
+
+      <div class="card reveal">
+        <i class="fas fa-bolt"></i>
+        <h3>Lightning Fast Performance</h3>
+        <p>Optimized websites engineered for speed, conversions, and Google ranking.</p>
+      </div>
+
+      <div class="card reveal">
+        <i class="fas fa-layer-group"></i>
+        <h3>Modern UI/UX Design</h3>
+        <p>Clean, premium interfaces designed to build trust and drive action.</p>
+      </div>
+
+      <div class="card reveal">
+        <i class="fas fa-search"></i>
+        <h3>SEO Optimization</h3>
+        <p>Rank higher on search engines with structured, semantic code.</p>
+      </div>
+
+      <div class="card reveal">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Responsive</h3>
+        <p>Perfect experience across all devices, from mobile to desktop.</p>
+      </div>
+
+    </div>
+
+    <div class="services-cta reveal">
+      <a class="btn primary"
+         href="https://wa.me/27611522746?text=Hi%20DevStudio%20%F0%9F%91%8B%20I%E2%80%99m%20ready%20to%20get%20a%20professional%20website%20built.%20Please%20guide%20me%20through%20your%20packages%20and%20pricing."
+         target="_blank">
+        <i class="fab fa-whatsapp"></i> Get a Business Website
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- STORE -->
+<section class="section" id="store">
+  <div class="container">
+
+    <div class="card reveal store-card">
+
+      <div class="card-content">
+        <h2 class="section-title">The Online Store</h2>
+        <p class="subtitle">
+          Premium gadgets and curated products for modern users.
+        </p>
+      </div>
+
+      <div class="card-actions">
+        <a class="btn primary full-btn"
+           href="https://yaga.co.za"
+           target="_blank">
+          <i class="fas fa-shopping-bag"></i> Visit Store
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FIBRE -->
+<section class="section" id="fibre">
+  <div class="container">
+
+    <h2 class="section-title reveal">Interent  Services </h2>
+
+    <div class="grid-2">
+
+      <!-- HOME & BUSINESS FIBRE -->
+<div class="card reveal fibre-card">
+  <div class="card-content">
+    <h3>Home & Business Fibre</h3>
+    <p>Get fast, stable fibre internet installed at your home or business with professional support and quick activation.</p>
+  </div>
+
+  <div class="card-actions">
+    <a class="btn primary full-btn"
+       href="https://wa.me/message/GPNBZY5WD5MTO1"
+       target="_blank">
+      <i class="fas fa-wifi"></i> Check Availability
+    </a>
+  </div>
+</div>
+
+
+<!-- AGENT RECRUITMENT -->
+<div class="card reveal fibre-card">
+  <div class="card-content">
+    <h3>Become a Fibre Agent</h3>
+    <p>Earn commissions by helping customers connect to high-speed fibre internet services.</p>
+  </div>
+
+  <div class="card-actions">
+    <a class="btn primary full-btn"
+       href="https://wa.me/27611522746?text=Hi%20%F0%9F%91%8B%20I%E2%80%99m%20interested%20in%20becoming%20a%20fibre%20agent.%20Please%20share%20commission%20details%2C%20requirements%2C%20and%20how%20I%20can%20get%20started."
+       target="_blank">
+      <i class="fab fa-whatsapp"></i> Join as Agent
+    </a>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- APP -->
+<section class="section dark" id="app">
+  <div class="container reveal">
+
+    <h2 class="section-title">Goal Mate AI</h2>
+
+    <p class="subtitle">
+      A smart AI-powered motivation system that helps you track goals, build discipline, and visualise success in real time.
+    </p>
+
+    <div class="card-actions">
+      <a class="btn secondary full-btn coming-soon"
+         href="#">
+        🚀 Coming Soon
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer class="footer" id="contact">
+
+  <div class="container footer-grid">
+
+    <div>
+      <h3>Contact</h3>
+      <p>Let’s build something powerful for your business.</p>
+
+      <a class="btn primary small"
+         href="https://wa.me/27611522746?text=Hi%20%F0%9F%91%8B%20I%20have%20an%20enquiry%20about%20your%20services.%20Please%20get%20back%20to%20me%20when%20possible."
+         target="_blank">
+        <i class="fab fa-whatsapp"></i> Contact Us
+      </a>
+    </div>
+
+    <div>
+      <h3>Social</h3>
+      <a href="https://github.com" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+
+    <div>
+      <h3>Navigation</h3>
+      <a href="#services">Services</a>
+      <a href="#store">Store</a>
+      <a href="#fibre">Fibre</a>
+      <a href="#app">App</a>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Diana's Digital Hub. All rights reserved.
+  </div>
+
+</footer>
 
 <script src="script.js"></script>
 </body>
